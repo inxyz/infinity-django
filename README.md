@@ -96,3 +96,8 @@ The service should be running (make sure to do Django migrations, create superus
         `ANSIBLE_VAULT_PASSWORD_FILE=.vault_password.txt ansible-vault encrypt travis_rsa --output travis_rsa.vault`
 
 ## Database download.
+
+- Existing production servers:
+    - test.wfx.io
+    - test.wefindx.io
+
