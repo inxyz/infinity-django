@@ -95,3 +95,4 @@ The service should be running (make sure to do Django migrations, create superus
     - Encrypt the travis_rsa, with Ansible vault, like so:
         `ANSIBLE_VAULT_PASSWORD_FILE=.vault_password.txt ansible-vault encrypt travis_rsa --output travis_rsa.vault`
 
+## Database download.
