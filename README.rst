@@ -1,6 +1,8 @@
 Infinity Project
 ================
 
+[![Travis status](https://img.shields.io/travis/inxyz/infinity-django/master.svg?style=flat)](https://travis-ci.org/inxyz/infinity-django)
+
 Here will be documentation.
 
 Preprequisites.
