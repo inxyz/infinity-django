@@ -83,3 +83,4 @@ deploy/ansible/roles/infty/files/*
 config/settings/dev.py
 travis_rsa
 travis_rsa.pub
+infinity.kdb
