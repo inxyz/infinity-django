@@ -100,4 +100,4 @@ The service should be running (make sure to do Django migrations, create superus
 - Existing production servers:
     - test.wfx.io
     - test.wefindx.io
-
+    - net.wfx.io
