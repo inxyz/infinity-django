@@ -1,4 +1,4 @@
-# Infinity Project
+# Infinity Project (test CI)
 
 [![Travis status](https://travis-ci.org/inxyz/infinity-django.svg?branch=base&style=flat)](https://travis-ci.org/inxyz/infinity-django)
 
@@ -17,17 +17,17 @@ Here will be documentation.
 + ReadTheDocs Account (readthedocs.io)
 ```
 
-To use entire this repository with some different GitHub organization, DockerHub account, and Hosting Service, just look at the changes here, to see what [changes needs to be changed for CI](https://github.com/inxyz/infinity-django/compare/af7f280003a57b08e19cbba1dc2ffd75a89baf97...69c8d6728e6336e62fc16730f86c60c24ed953ee).
+This is configured to run on `net.wfx.io`. To use entire this repository with some different Domain, GitHub organization, DockerHub account, and Hosting Service, just look at the changes here, to see what [changes needs to be changed for CI](https://github.com/inxyz/infinity-django/compare/af7f280003a57b08e19cbba1dc2ffd75a89baf97...69c8d6728e6336e62fc16730f86c60c24ed953ee).
 
 ## Project devops:
 
 All relevant information is available in `infinity.kdb.gpg`, which is a KeePassX file with same password as filename.
 
+### decrypt:
 ```
-# decrypt:
 gpg -d infinity.kdb.gpg > infinity.kdb
-
-# encrypt:
+```
+### encrypt:
 1. import others' public keys
 ```
 curl https://api.github.com/users/<GITHUB_USERNAME>/gpg_keys | jq -r ".[0].raw_key" | gpg --import -
@@ -37,9 +37,12 @@ curl https://api.github.com/users/<GITHUB_USERNAME>/gpg_keys | jq -r ".[0].raw_k
 gpg --list-keys
 ```
 
-2. encrypt to those people (currently: [mindey](https://api.github.com/users/mindey/gpg_keys))
+3. encrypt to those people by e-mail (currently: [mindey](https://api.github.com/users/mindey/gpg_keys))
+```
 gpg -e -o infinity.kdb.gpg -r <email> -r <email> infinity.kdb
 ```
+
+## Project development:
 
 - Checkout this repository locally.
     - Work locally by simply `docker-compose up` ([convenience commandsb](https://gist.github.com/mindey/6b9f3c6eb5cac93b62d5abaa15a4d9ba))
