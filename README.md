@@ -61,7 +61,7 @@ gpg -d infinity.kdb.gpg > infinity.kdb
 - Finally, visit the:
     - https://mydomain.com
 
-The service should be running (make sure to do Django migrations, create superuser).
+The service should be running (make sure to do Django migrations, create superuser, load database). [convenience commands](https://gist.github.com/mindey/34fb97b5082d551ccb3bf24602e243ff).
 
 ## Deployment from CI, Travis
 
