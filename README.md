@@ -27,6 +27,8 @@ This is configured to run on `net.wfx.io`. To use entire this repository with so
 
 All relevant information is available in `infinity.kdb.gpg`, which is a KeePassX file with same password as filename.
 
+Ask friends to create their public GPG keys and upload them to GitHub ([instructions](https://help.github.com/articles/generating-a-new-gpg-key/)).
+
 ### decrypt:
 ```
 gpg -d infinity.kdb.gpg > infinity.kdb
