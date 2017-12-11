@@ -8,7 +8,6 @@ git config --global user.name "Travis CI"
 
 echo "Clone the repo..."
 git clone --quiet https://${GITHUB_API_KEY}@github.com/${TRAVIS_REPO_SLUG} code
-git branch master
 
 echo "Marking current build..."
 cd ./code
