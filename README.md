@@ -1,4 +1,4 @@
-# Infinity Project
+# Infinity Project (test CI)
 
 [![Travis status](https://travis-ci.org/inxyz/infinity-django.svg?branch=base&style=flat)](https://travis-ci.org/inxyz/infinity-django)
 
