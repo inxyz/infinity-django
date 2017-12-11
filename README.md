@@ -37,7 +37,7 @@ curl https://api.github.com/users/<GITHUB_USERNAME>/gpg_keys | jq -r ".[0].raw_k
 gpg --list-keys
 ```
 
-3. encrypt to those people by e-mail (currently: [mindey](https://api.github.com/users/mindey/gpg_keys)
+3. encrypt to those people by e-mail (currently: [mindey](https://api.github.com/users/mindey/gpg_keys))
 ```
 gpg -e -o infinity.kdb.gpg -r <email> -r <email> infinity.kdb
 ```
