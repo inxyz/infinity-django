@@ -26,18 +26,12 @@ All relevant information is available in `infinity.kdb.gpg`, which is a KeePassX
 ```
 # decrypt:
 gpg -d infinity.kdb.gpg > infinity.kdb
-
 # encrypt:
 1. import others' public keys
-```
 curl https://api.github.com/users/<GITHUB_USERNAME>/gpg_keys | jq -r ".[0].raw_key" | gpg --import -
-```
 2. check who is available
-```
 gpg --list-keys
-```
-
-2. encrypt to those people (currently: [mindey](https://api.github.com/users/mindey/gpg_keys))
+3. encrypt to those people (currently: [mindey](https://api.github.com/users/mindey/gpg_keys))
 gpg -e -o infinity.kdb.gpg -r <email> -r <email> infinity.kdb
 ```
 
