@@ -24,7 +24,21 @@ To use entire this repository with some different GitHub organization, DockerHub
 All relevant information is available in `infinity.kdb.gpg`, which is a KeePassX file with same password as filename.
 
 ```
+# decrypt:
 gpg -d infinity.kdb.gpg > infinity.kdb
+
+# encrypt:
+1. import others' public keys
+```
+curl https://api.github.com/users/<GITHUB_USERNAME>/gpg_keys | jq -r ".[0].raw_key" | gpg --import -
+```
+2. check who is available
+```
+gpg --list-keys
+```
+
+2. encrypt to those people (currently: [mindey](https://api.github.com/users/mindey/gpg_keys))
+gpg -e -o infinity.kdb.gpg -r <email> -r <email> infinity.kdb
 ```
 
 - Checkout this repository locally.
@@ -61,8 +75,8 @@ gpg -d infinity.kdb.gpg > infinity.kdb
 - Finally, visit the:
     - https://mydomain.com
 
-The service should be running (make sure to do Django migrations, create superuser, load database). [convenience commands](https://gist.github.com/mindey/34fb97b5082d551ccb3bf24602e243ff).
 
+The service should be running (make sure to do Django migrations, create superuser, load database). [convenience commands](https://gist.github.com/mindey/34fb97b5082d551ccb3bf24602e243ff).
 ## Deployment from CI, Travis
 
 - On Travis:
