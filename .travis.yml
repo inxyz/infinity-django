@@ -17,9 +17,9 @@ env:
   - secure: jC/rBCpcmFutYue7fdQFsR4iz5TyGhqNZISCHaj/g49DcQIRpwyge4DtGEPu0vf0a6qzg5EReCHcQiQiZVw5I6dY72xgQlDVv93vWxlVshoyQDQWREkTGVY3bGTjMA6SlpSg7qY3K2e1MvpoBfF1IGLV9UKYslo5hXOVXUN8ey0PKi8eHu7K1MCoArTxvqMzyQgugn+c9A2dt1VmhI4CSKpWh5hvrOA2SkiqWENvFQRX32rMMsSXVFtvDix9Ki9gQ/ggVmWklcnpHy5ZLdsaLLQ2RPHsS/beWRZLR1VngszYiZH07vHYaDhnHWStFyeRdK9LbqBixjL9if3FpX7PcFg5yR/2eLDvKPW0+FRf0mfOoUOo8GPZSEBxq6s4XR5Y8vHilZbta2ONWdWzVd9aAngc3yZ+WfaGt8niqEU5kRRqw2WtwJpWrDPnD7q6U/sd/CMSRUeDHWJ/GZ50kX7Dr82fh06tnx9yffRo5fgsCRFEY/XZ0nuEzkFMqPlnLuBuuAF3qkRi5z4FfoX8xYqNIVVqGDER45pWIrEzanyT3zwFiSFSaMmF/KAOJapgOLxVR+muPnu/TT61nEY11ZmA+viNv0Fui7iH4WFMK6bCi4c+ogDUbbkT+Geu707iokiLR3s9nsH5jY+uQiJr/aeY7NNBwmANhttD3tVOzSOJTL4=
 branches:
   only:
-  - base
-  except:
   - master
+  except:
+  - base
 before_install:
 - sudo apt-add-repository -y ppa:ansible/ansible
 - sudo apt-get update -qq
