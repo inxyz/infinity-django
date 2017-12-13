@@ -9,10 +9,12 @@ git config --global user.name "Travis CI"
 echo "Clone the repo..."
 git clone --quiet https://${GITHUB_API_KEY}@github.com/${TRAVIS_REPO_SLUG} code
 
+git checkout master
+
 echo "Marking current build..."
 cd ./code
 echo "${TRAVIS_BUILD_NUMBER}" > .buildno
-git merge origin/master
+git merge origin/base
 git add .buildno
 git commit --message "Travis build: ${TRAVIS_BUILD_NUMBER}"
 
